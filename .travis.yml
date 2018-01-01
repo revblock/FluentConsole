@@ -1,0 +1,12 @@
+language: csharp
+mono: none
+dotnet: 2.1.2
+script:
+  - dotnet restore
+  - dotnet build ./PixelHarmony.FluentConsole/
+  - dotnet build ./PixelHarmony.FluentConsole.Tests/
+  - dotnet test ./PixelHarmony.FluentConsole.Tests/
+deploy:
+  skip_cleanup: true
+  provider: script
+  script: chmod +x ./deploy.sh && ./deploy.sh $NUGET_API_KEY $TRAVIS_BUILD_NUMBER

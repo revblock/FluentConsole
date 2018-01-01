@@ -1,6 +1,8 @@
 # Fluent Console
 A simple fluent API that wraps the dotnet Console API
 
+[![Build Status](https://travis-ci.org/pixelharmony/FluentConsole.svg?branch=master)](https://travis-ci.org/pixelharmony/FluentConsole)
+
 # How it works
 
 ## Simple Messages
